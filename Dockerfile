@@ -1,8 +1,8 @@
-FROM alpine
+FROM alpine:3.14
 
 RUN apk add --no-cache bash rssh
 
-RUN echo -e "easytoguess\easytoguess\n" | adduser -u 999 -h /home/data -s /usr/bin/rssh data
+RUN echo -e "muchtooeasytoguess\nmuchtooeasytoguess\n" | adduser -u 1000 -h /home/data -s /usr/bin/rssh data
 
 RUN echo -e "PasswordAuthentication no\n" >>/etc/ssh/sshd_config
 
