@@ -6,5 +6,5 @@ services:
     ports:
       - "2222:22"
     volumes:
-      - ./key/:/var/local/etc/ssh
+      - ./key:/var/local/etc/ssh
       - ./datas:/home/data
