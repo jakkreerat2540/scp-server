@@ -1,9 +1,10 @@
 version: '3.8'
 services:
-  name: scp-server
-  build: .
-  ports:
-    - "2222:22"
-  volumes:
-    - ./key/:/var/local/etc/ssh
-    - ./datas:/home/data
+  scp-server: 
+    container_name: scp-server
+    build: .
+    ports:
+      - "2222:22"
+    volumes:
+      - ./key/:/var/local/etc/ssh
+      - ./datas:/home/data
